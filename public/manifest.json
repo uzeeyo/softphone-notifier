@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Fax Notifier",
+  "version": "1.0",
+  "description": "Notifies users when a fax comes in.",
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "matches": ["https://max.niceincontact.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "./background.js",
+    "type": "module"
+  },
+  "permissions": ["scripting", "storage"],
+  "action": {
+    "default_popup": "./popup/popup.html"
+  }
+}

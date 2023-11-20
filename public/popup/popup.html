@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="./popup.js"></script>
+  </head>
+  <body class="min-w-[200px]">
+    <div class="flex flex-col text-md text-slate-200 bg-slate-900 p-4 mx-auto">
+      <label
+        for="activeToggle"
+        class="bg-slate-700 rounded-full cursor-pointer mx-auto p-2 mb-2"
+      >
+        <input class="peer hidden" type="checkbox" id="activeToggle" />
+        <svg
+          class="fill-slate-500 peer-checked:fill-orange-600"
+          height="50px"
+          width="50px"
+          version="1.1"
+          id="_x32_"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path
+                class="st0"
+                d="M423.262,91.992c-16.877-15.91-43.434-15.098-59.32,1.778c-15.894,16.877-15.098,43.434,1.779,59.32 c32.082,30.213,49.754,71.238,49.754,115.5c0,87.934-71.541,159.476-159.476,159.476S96.525,356.524,96.525,268.59 c0-44.262,17.668-85.287,49.754-115.5c16.877-15.885,17.672-42.442,1.779-59.32c-15.885-16.885-42.455-17.688-59.32-1.778 C40.344,137.557,12.59,201.926,12.59,268.59C12.59,402.803,121.783,512,256,512c134.213,0,243.41-109.197,243.41-243.41 C499.41,201.926,471.656,137.557,423.262,91.992z"
+              ></path>
+              <path
+                class="st0"
+                d="M256,268.59c23.178,0,41.967-15.033,41.967-33.574V33.574C297.967,15.033,279.178,0,256,0 c-23.178,0-41.967,15.033-41.967,33.574v201.443C214.033,253.557,232.822,268.59,256,268.59z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </label>
+
+      <h1 class="text-xl mb-2 mx-auto select-none text-orange-500">
+        Fax Notifier
+      </h1>
+      <div class="row mb-2 items-center">
+        <div>Dark mode:</div>
+        <label class="relative cursor-pointer ml-auto">
+          <input type="checkbox" class="sr-only peer" />
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+        </label>
+      </div>
+
+      <div class="row items-center mb-1">
+        <label for="toneSelector">Tone: </label>
+        <select
+          id="toneSelector"
+          class="bg-slate-700 rounded-lg ml-auto px-2 py-1"
+        >
+          <option value="0">Short beep</option>
+          <option value="1">Long beep</option>
+          <option value="2">Melody</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>

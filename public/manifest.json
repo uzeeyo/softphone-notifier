@@ -16,5 +16,11 @@
   "permissions": ["scripting", "storage"],
   "action": {
     "default_popup": "./popup/popup.html"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["/audio/not0.mp3"],
+      "matches": ["https://max.niceincontact.com/*"]
+    }
+  ]
 }

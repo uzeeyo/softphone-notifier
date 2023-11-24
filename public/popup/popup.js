@@ -15,5 +15,3 @@ function setSound(option) {
     value: option,
   });
 }
-
-function playSound() {}

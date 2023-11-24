@@ -14,6 +14,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendRes) => {
 async function getSelectedTone(): Promise<number> {
   let res = await chrome.storage.local.get("savedSound");
 
+  if (!res.savedSound) {
+    setTone(0);
+    return 0;
+  }
+
   return parseInt(res.savedSound);
 }
 

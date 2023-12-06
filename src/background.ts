@@ -15,13 +15,13 @@ async function getSelectedTone(): Promise<number> {
   let res = await chrome.storage.local.get("savedSound");
 
   if (!res.savedSound) {
-    setTone(0);
+    await setTone(0);
     return 0;
   }
 
   return parseInt(res.savedSound);
 }
 
-function setTone(option: number) {
-  chrome.storage.local.set({ savedSound: option });
+async function setTone(option: number): Promise<void> {
+  await chrome.storage.local.set({ savedSound: option });
 }

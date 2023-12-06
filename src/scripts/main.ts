@@ -3,9 +3,12 @@ let tone: HTMLAudioElement;
 
 window.addEventListener("load", () => {
   chrome.runtime.sendMessage({ message: "getTone" }, (response) => {
-    let url = chrome.runtime.getURL(`./audio/not${response.value}.mp3`);
+    let toneNumber: Number = response.value;
+    if (!toneNumber) {
+      toneNumber = 0;
+    }
+    let url = chrome.runtime.getURL(`./audio/not${toneNumber}.mp3`);
     tone = new Audio(url);
-    console.log(`Loaded selected tone: ${url}`);
   });
 
   let intervalId = setInterval(() => {
@@ -13,7 +16,6 @@ window.addEventListener("load", () => {
     if (fax) {
       clearInterval(intervalId);
       beginObserving();
-      console.log("Waiting for fax to open...");
     }
   }, 1000);
 });
@@ -25,8 +27,6 @@ function beginObserving() {
         tone.play().catch((err) => {
           console.error(err);
         });
-
-        console.log("Fax received!");
       }
     });
   });

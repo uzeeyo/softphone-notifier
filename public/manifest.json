@@ -21,6 +21,10 @@
     {
       "resources": ["/audio/not0.mp3"],
       "matches": ["https://max.niceincontact.com/*"]
+    },
+    {
+      "resources": ["/audio/not1.mp3"],
+      "matches": ["https://max.niceincontact.com/*"]
     }
   ]
 }
